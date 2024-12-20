@@ -1,0 +1,167 @@
+/* On small screens, hide the sidebar text */
+  body{
+    padding-top: 120px;
+    background-color:azure;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  li span {
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    margin-right: 10px; /* Space between the box and the text */
+  }
+
+
+  #sidebar {
+    position: fixed;
+    left: 0;
+   
+    height: 100%;
+    width: 60px; /* Initially collapsed */
+    background-color: rgb(10, 10, 62);
+    color: white;
+    transition: width 0.3s ease; /* Smooth transition for width */
+    z-index: 1;
+    overflow: hidden; /* Hide overflow content */
+    padding-top: 20px;
+  }
+
+  /* Expanded sidebar styling */
+  #sidebar.expanded {
+    width: 200px; /* Full width when expanded */
+  }
+
+  /* Sidebar content */
+  #sidebar h2 {
+    text-align: center;
+    color: white;
+    transition: opacity 0.3s ease; /* Smooth transition for text visibility */
+    opacity: 0; /* Hidden by default in collapsed mode */
+  }
+
+  #sidebar.expanded h2 {
+    opacity: 1; /* Visible when expanded */
+  }
+
+  /* Sidebar links */
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .sidebar-link i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2rem;
+  }
+
+  .sidebar-link span {
+    transition: opacity 0.3s ease; /* Smooth transition for text visibility */
+    opacity: 0; /* Hidden by default in collapsed mode */
+  }
+  /* #sidebar {
+      opacity: 0;
+  } */
+  #sidebar.expanded{
+      opacity: 1;
+  }
+
+
+  #sidebar.expanded .sidebar-link span {
+    opacity: 1; /* Visible when expanded */
+  }
+
+  /* Button to toggle the sidebar */
+  #toggleButton {
+    
+    
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+
+  /* Pop-Up Background */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+  
+}
+
+/* Pop-Up Content */
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+  
+
+  @media (max-width: 768px) {
+    #sidebar{
+      opacity: 0;
+      transition: opacity 0.1s ease; /* Hide text on mobile by default */
+    }
+
+   
+
+    body{
+      padding-left: 0%;
+      padding-top: 160px;
+    }
+
+
+    #main2 {
+      padding-left: 0% !important;
+      
+       /* Optional: reset right padding too */
+    }
+   
+  }
+ 
+  

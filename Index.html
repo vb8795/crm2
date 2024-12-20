@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="style.css" class="css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .date-container {
+      white-space: nowrap;
+      margin-left: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    
+  </style>
+</head>
+<body>
+ <!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg bg-light shadow-sm fixed-top" style="background-color: #24243d;">
+  <div class="container">
+    <!-- Left Section: Logo and Company Name -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://via.placeholder.com/40" alt="Logo" class="me-2">
+      <span class="fw-bold">CompanyName</span>
+    </a>
+
+    <!-- Center Section: Search Button -->
+    <button class="btn btn-outline-success">
+      <i class="fas fa-search"></i>
+    </button>
+
+    <!-- Right Section: Icons and Date -->
+    <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+      <a href="#" class="btn btn-link text-dark"><i class="fas fa-home fa-lg"></i></a>
+      <a href="#" class="btn btn-link text-dark"><i class="fas fa-bell fa-lg"></i></a>
+      <a href="#" class="btn btn-link text-dark"><i class="fas fa-envelope fa-lg"></i></a>
+      <a href="#" class="btn btn-link text-dark"><i class="fas fa-user fa-lg"></i></a>
+      <a href="#" class="btn btn-link text-dark"><i class="fas fa-cog fa-lg"></i></a>
+      <img src="https://via.placeholder.com/40" alt="Logo" class="me-2">
+      <div>
+        <!-- Date Section -->
+        <div class="date-container" id="currentDay"></div>
+        <div class="date-container" id="currentDate"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End of Navbar Section -->
+
+<!-- Wrapper Div: Sidebar and Main Content -->
+<div class="d-flex">
+  <!-- Sidebar Section -->
+  <div id="sidebar">
+    <h2>Dashboard</h2>
+    <a href="#" class="sidebar-link"><i class="fas fa-chart-line"></i> <span>Reports & Analysis</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-pencil" id="openFormLink"></i> <span>Leads</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-video"></i> <span>Webinars</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-file-alt"></i> <span>Case Studies</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-calculator"></i> <span>ROI Calculator</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-boxes"></i> <span>Stock Amount</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-cogs"></i> <span>Setting</span></a>
+    <a href="#" class="sidebar-link"><i class="fas fa-sign-out-alt"></i> <span>Log-out</span></a>
+  </div>
+  <!-- End of Sidebar Section -->
+
+  <!-- Main Content Section -->
+  <div class="container-fluid" id="main2" style="padding-left:60px;"
+    <!-- Top Overview Section -->
+    <div style="height: 10vh; width: auto; background-color: aqua;" class="d-flex justify-content-between align-items-center">
+      <div class="container-fluid d-flex justify-content-between align-items-center" style="height: 100px; margin-left: 2%; margin-right: 2%;">
+        <!-- Left: Title -->
+        <div style="text-align: left;">Overview</div>
+        <!-- Right: Buttons -->
+        <div style="text-align: right;">
+          <button>Download</button>
+          <button id="toggleButton">
+            <i style="color: red;" class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End of Top Overview Section -->
+
+    <!-- First Row: Key Metrics -->
+    <div class="row w-100 mx-auto" style="align-items: center; justify-content: center; text-align: center;">
+      <!-- Metric 1 -->
+      <div class="col-md bg-light border p-2 m-2">
+        <p>Active Opportunities Amount</p>
+        <p style="color: blue;"><b>$78999</b></p>
+      </div>
+      <!-- Metric 2 -->
+      <div class="col-md bg-light border p-2 m-2">
+        <p>Wan Opportunities</p>
+        <p style="color: red;"><b>$45678</b></p>
+      </div>
+      <!-- Metric 3 -->
+      <div class="col-md bg-light border p-2 m-2">
+        <p>Sales Conversion Rate</p>
+        <p style="color: rgb(8, 173, 173);"><b>75%</b></p>
+      </div>
+    </div>
+    <!-- End of First Row -->
+
+    <!-- Second Row: Mini Cards -->
+    <div class="row">
+      <!-- Left Column -->
+      <div class="d-flex col-md-6" style="align-items: center; justify-content: center;">
+        <!-- Card 1 -->
+        <div class="bg-light border p-2 m-2" style="height: 100%; width: 33%; text-align: center;">
+          <p>Selected</p>
+          <p><b>34</b></p>
+          <p>78</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-light border p-2 m-2" style="height: 100%; width: 33%; text-align: center;">
+          <p>On Board</p>
+          <p><b>30</b></p>
+          <p>77</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-light border p-2 m-2" style="height: 100%; width: 33%; text-align: center;">
+          <p>In Active</p>
+          <p><b>35</b></p>
+          <p>56</p>
+        </div>
+      </div>
+      <!-- Right Column -->
+      <div class="d-flex col-md-6" style="align-items: center; justify-content: center;">
+        <!-- Repeat Cards -->
+        <div class="bg-light border p-2 m-2" style="height: 100%; width: 33%; text-align: center;">
+          <p>Selected</p>
+          <p><b>34</b></p>
+          <p>78</p>
+        </div>
+        <div class="bg-light border p-2 m-2" style="height: 100%; width: 33%; text-align: center;">
+          <p>On Board</p>
+          <p><b>30</b></p>
+          <p>77</p>
+        </div>
+        <div class="bg-light border p-2 m-2" style="height: 100%; width: 33%; text-align: center;">
+          <p>In Active</p>
+          <p><b>35</b></p>
+          <p>56</p>
+        </div>
+      </div>
+    </div>
+    <!-- End of Second Row -->
+
+    <!-- Chart Section -->
+    <div class="container row mt-5 mb-5 m-2">
+      <!-- Left: Circle Chart -->
+      <div class="col-md-6 p-5 " style="border: 1px solid; min-height: 600px;">
+        <canvas id="mycircleChart"></canvas>
+      </div>
+      <!-- Right: Bar and Line Charts -->
+      <div class="col-md-6" style="border: 1px solid; min-height: 600px;">
+        <canvas id="myChart" style="max-width: 100%; "></canvas>
+        <canvas id="myChart1" style="max-width: 100%; "></canvas>
+      </div>
+    </div>
+    <!-- End of Chart Section -->
+  </div>
+  <!-- End of Main Content Section -->
+</div>
+<!-- End of Wrapper -->
+
+<!-- Popup Form Section -->
+<div id="popupForm" class="popup hidden">
+  <div class="popup-content">
+    <span id="closePopup" class="close">&times;</span>
+    <h3>Pop-Up Form</h3>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- End of Popup Form Section -->
+ 
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Set current date and day
+    const currentDateContainer = document.getElementById('currentDate');
+    const now = new Date();
+    const options = { weekday: 'long' };
+    // const options = { weekday: 'long',  day: 'numeric' };
+    const formattedDate = now.toLocaleDateString(undefined, options);
+    currentDateContainer.textContent = formattedDate;
+
+    const currentDayContainer = document.getElementById('currentDay');
+    const now1 = new Date();
+    // const options = { weekday: 'long' };
+    const optionss = { day: 'numeric' };
+    const formattedDay = now1.toLocaleDateString(undefined, optionss);
+    currentDayContainer.textContent = formattedDay;
+
+    const ctx = document.getElementById('myChart');
+    const ctx1 = document.getElementById('myChart1');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# All Products',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'Campaign Performance',
+          data: [12, 19, 3, 5, 2, 3, 6],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.getElementById('toggleButton');
+
+    // Add a click event listener to the toggle button
+    toggleButton.addEventListener('click', () => {
+      // Toggle the 'expanded' class on the sidebar
+      sidebar.classList.toggle('expanded');
+    });
+
+    // Get Elements
+    const openFormLink = document.getElementById('openFormLink');
+    const popupForm = document.getElementById('popupForm');
+    const closePopup = document.getElementById('closePopup');
+
+// Show Pop-Up Form
+openFormLink.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default link behavior
+  popupForm.classList.remove('hidden');
+});
+
+// Close Pop-Up Form
+closePopup.addEventListener('click', () => {
+  popupForm.classList.add('hidden');
+});
+
+// Optional: Close Pop-Up when clicking outside the content
+popupForm.addEventListener('click', (event) => {
+  if (event.target === popupForm) {
+    popupForm.classList.add('hidden');
+  }
+});
+
+const ctx2 = document.getElementById('mycircleChart');
+
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['New Leads', 'Available', 'Requisite', 'Selected', 'On Board', 'In Active'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [6, 7, 8, 8, 9, 10],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+  </script>
+</body>
+</html>
